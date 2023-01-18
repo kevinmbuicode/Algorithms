@@ -5,6 +5,16 @@
 // 2. pop(): This method removes the last element of an array. Time complexity: O(1)
 
 // 3. shift(): This method removes the first element of an array. Time complexity: O(n)
+// Eg:
+const array1 = [1, 2, 3];
+
+const firstElement = array1.shift();
+
+console.log(array1);
+// Expected output: Array [2, 3]
+
+console.log(firstElement);
+// Expected output: 1
 
 // 4. unshift(): This method adds an element to the beginning of an array. Time complexity: O(n)
 
@@ -58,9 +68,9 @@ console.log(result);
 // 9. map(): This method creates a new array with the results of calling a provided function on every element in the calling array. Time complexity: O(n)
 
 // 10. forEach(): This method calls a provided function once for each element in an array. Time complexity: O(n)
-const array1 = ['a', 'b', 'c'];
+const array2 = ['a', 'b', 'c'];
 
-array1.forEach(element => console.log(element));
+array2.forEach(element => console.log(element));
 
 // 11. concat(): This method returns a new array that consists of the elements in the original array, followed by the elements in the specified array(s) or value(s). Time complexity: O(n)
 
