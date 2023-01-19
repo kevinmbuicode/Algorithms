@@ -79,15 +79,77 @@ array2.forEach(element => console.log(element));
 // 13. reduce(): This method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value. Time complexity: O(n)
 
 // 14. find(): This method returns the value of the first element in the array that satisfies the provided testing function. Time complexity: O(n)
+// Eg:
+const array = [5, 11, 8, 13, 44];
 
-// 15. findIndex(): This method returns the index of the first element in the array that satisfies the provided testing function. Time complexity: O(n)
+const found = array.find(element => element > 10);
+
+console.log(found);
+// Expected output: 12
+
+// 15. findIndex(): This method returns the index of the first element in the array that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned.
+// Time complexity: O(n)
+const array3 = [5, 12, 8, 130, 44];
+
+const isLargeNumber = (element) => element > 13;
+
+console.log(array3.findIndex(isLargeNumber));
+// Expected output: 3
 
 // 16. some(): This method tests whether at least one element in the array passes the test implemented by the provided function. Time complexity: O(n)
+// Eg:
+const array4 = [1, 2, 3, 4, 5];
+
+// Checks whether an element is even
+const even = (element) => element % 2 === 0;
+
+console.log(array4.some(even));
+// Expected output: true
 
 // 17. every(): This method tests whether all elements in the array pass the test implemented by the provided function. Time complexity: O(n)
+// Eg:
+const isBelowThreshold = (currentValue) => currentValue < 40;
+
+const array5 = [1, 30, 39, 29, 10, 13];
+
+console.log(array5.every(isBelowThreshold));
+// Expected output: true
 
 // 18. indexOf(): This method returns the first index at which a given element can be found in the array, or -1 if it is not present. Time complexity: O(n)
+// Eg:
+const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+
+console.log(beasts.indexOf('bison'));
+// Expected output: 1
+
+// Start from index 2
+console.log(beasts.indexOf('bison', 2));
+// Expected output: 4
+
+console.log(beasts.indexOf('giraffe'));
+// Expected output: -1
 
 // 19. lastIndexOf(): This method returns the last index at which a given element can be found in the array, or -1 if it is not present. Time complexity: O(n)
+// Eg:
+const animals1 = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
+
+console.log(animals1.lastIndexOf('Dodo'));
+// Expected output: 3
+
+console.log(animals1.lastIndexOf('Tiger'));
+// Expected output: 1
 
 // 20. includes(): This method determines whether an array includes a certain value among its entries, returning true or false as appropriate. Time complexity: O(n)
+// Eg:
+const array6 = [1, 2, 3];
+
+console.log(array6.includes(2));
+// Expected output: true
+
+const pets = ['cat', 'dog', 'bat'];
+
+console.log(pets.includes('cat'));
+// Expected output: true
+
+console.log(pets.includes('at'));
+// Expected output: false
