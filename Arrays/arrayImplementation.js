@@ -10,3 +10,6 @@ class MyArray{
         return this.data[index];
     }
 }
+
+const newArray = new MyArray();
+console.log(newArray)
