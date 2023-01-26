@@ -44,6 +44,6 @@ newArray.push("Kev");
 newArray.push("Mbui");
 newArray.push("Mushan");
 newArray.push("Mushan2");
-// newArray.pop();
+newArray.pop();
 newArray.delete(2);
 console.log(newArray)
