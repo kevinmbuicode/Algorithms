@@ -24,7 +24,16 @@ class MyArray {
     }
 
     delete(index) {
-        this.shiftItems(this.data[index])
+        // const item = this.data[index];
+        this.shiftItems(index);
+    }
+
+    shiftItems(index) {
+        for(let i = index; i < this.length; i++) {
+            this.data[i] = this.data[i + 1];
+        }
+        delete this.data[this.length - 1]
+        this.length--;
     }
 
 }
@@ -33,5 +42,8 @@ const newArray = new MyArray();
 newArray.push("Hi");
 newArray.push("Kev");
 newArray.push("Mbui");
-newArray.pop();
+newArray.push("Mushan");
+newArray.push("Mushan2");
+// newArray.pop();
+newArray.delete(2);
 console.log(newArray)
